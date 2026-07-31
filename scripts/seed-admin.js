@@ -26,9 +26,6 @@ async function main() {
   }
 
   const { default: AdminAccount } = await import("../models/schema/accounts/admin.js");
-  const { syncDatabase } = await import("../controller/recognition/index.js");
-
-  await syncDatabase();
 
   const normalizedEmail = email.toLowerCase().trim();
   const existing = await AdminAccount.findOne({ where: { email: normalizedEmail } });

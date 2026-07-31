@@ -249,6 +249,3 @@ export async function submitApplication(req) {
   }
 }
 
-export async function syncDatabase() {
-  await sequelize.sync({ alter: true });
-}
